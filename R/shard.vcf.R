@@ -26,6 +26,8 @@ shard.vcf = function(vcf.file, n=1e5, directory=NULL){
       writeLines(lines, o)
       close(o)
       
+      rm(lines)
+      
       write.file(f, file.list=c(file.list, output.file))
     } else file.list
     
